@@ -1,0 +1,6 @@
+{
+  "name": "ArchMind - AI-Powered Architecture & Design",
+  "description": "Modern, premium, futuristic, and minimalist landing page for ArchMind with Sign In and Sign Up authentication portals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

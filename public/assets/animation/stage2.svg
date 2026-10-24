@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="sky_sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BAE6FD" />
+      <stop offset="100%" stop-color="#E0F2FE" />
+    </linearGradient>
+    <linearGradient id="ceiling_cove" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E5E5E0" />
+      <stop offset="100%" stop-color="#D6D6D0" />
+    </linearGradient>
+    <pattern id="tile_grid" width="120" height="60" patternUnits="userSpaceOnUse">
+      <rect width="120" height="60" fill="#EAEAE5" stroke="#C8C8C2" stroke-width="1.5" />
+    </pattern>
+  </defs>
+
+  <!-- Suspended Drywall Ceiling with Recessed Drop Box -->
+  <polygon points="0,0 1920,0 1560,310 360,310" fill="url(#ceiling_cove)" />
+  <!-- Steel Furring Channel Grid (Metal C-Tracks hanging from ceiling) -->
+  <path d="M 400,120 L 1520,120" stroke="#9CA3AF" stroke-width="4" stroke-dasharray="10 4" />
+  <path d="M 420,190 L 1500,190" stroke="#9CA3AF" stroke-width="4" stroke-dasharray="10 4" />
+  <path d="M 460,260 L 1460,260" stroke="#9CA3AF" stroke-width="4" stroke-dasharray="10 4" />
+  <line x1="600" y1="0" x2="600" y2="310" stroke="#9CA3AF" stroke-width="3" />
+  <line x1="840" y1="0" x2="840" y2="310" stroke="#9CA3AF" stroke-width="3" />
+  <line x1="1080" y1="0" x2="1080" y2="310" stroke="#9CA3AF" stroke-width="3" />
+  <line x1="1320" y1="0" x2="1320" y2="310" stroke="#9CA3AF" stroke-width="3" />
+
+  <!-- Back Wall with Clean Drywall Plastering -->
+  <polygon points="360,310 1560,310 1560,760 360,760" fill="#EFEFEA" />
+  <rect x="880" y="420" width="180" height="340" fill="#E0E0DB" />
+
+  <!-- Left Wall with Expansive Floor-to-Ceiling Sliding Glass Door Frame! -->
+  <polygon points="0,0 360,310 360,760 0,1080" fill="#E5E5DF" />
+  <!-- Glass Window Opening to Sunny Balcony & Greenery -->
+  <polygon points="40,160 340,320 340,750 40,940" fill="url(#sky_sun)" />
+  <!-- Trees and Balcony Railing outside glass -->
+  <path d="M 60,650 Q 140,540 220,620 T 340,600" fill="#84CC16" fill-opacity="0.6" />
+  <line x1="40" y1="740" x2="340" y2="690" stroke="#6B7280" stroke-width="4" />
+  <!-- Black Aluminum Minimalist Sliding Door Frames -->
+  <polygon points="40,160 340,320 340,750 40,940" fill="none" stroke="#1F2937" stroke-width="12" />
+  <line x1="190" y1="240" x2="190" y2="845" stroke="#1F2937" stroke-width="10" />
+
+  <!-- Right Wall: Smooth White Plaster with Flush Electrical Boxes -->
+  <polygon points="1560,310 1920,0 1920,1080 1560,760" fill="#EFEFEA" />
+  <rect x="1620" y="520" width="16" height="26" fill="#F97316" />
+  <rect x="1660" y="520" width="16" height="26" fill="#F97316" />
+
+  <!-- Floor: Ceramic Tile Grid (White/Light Grey with grout lines) -->
+  <polygon points="0,1080 360,760 1560,760 1920,1080" fill="url(#tile_grid)" />
+  <!-- Tile spacers and electrical cables on floor -->
+  <path d="M 600,820 Q 900,940 1200,880" stroke="#1F2937" stroke-width="5" fill="none" />
+
+  <!-- Mobile Scaffolding Tower on Left -->
+  <g id="scaffold" transform="translate(180, 480)">
+    <line x1="0" y1="0" x2="0" y2="300" stroke="#4B5563" stroke-width="6" />
+    <line x1="120" y1="20" x2="120" y2="320" stroke="#4B5563" stroke-width="6" />
+    <line x1="0" y1="60" x2="120" y2="80" stroke="#4B5563" stroke-width="5" />
+    <line x1="0" y1="180" x2="120" y2="200" stroke="#4B5563" stroke-width="5" />
+    <line x1="0" y1="60" x2="120" y2="200" stroke="#9CA3AF" stroke-width="3" />
+    <line x1="120" y1="80" x2="0" y2="180" stroke="#9CA3AF" stroke-width="3" />
+    <rect x="-10" y="50" width="140" height="12" fill="#D97706" />
+  </g>
+
+  <!-- Construction Workers in Yellow Vests -->
+  <g id="worker_center" transform="translate(940, 500)">
+    <ellipse cx="60" cy="40" rx="16" ry="11" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2" />
+    <circle cx="60" cy="50" r="9" fill="#D4A373" />
+    <path d="M 44,60 L 76,60 L 82,130 L 40,130 Z" fill="#E6FF00" />
+    <rect x="42" y="90" width="40" height="8" fill="#E5E7EB" />
+    <path d="M 42,130 L 56,130 L 54,230 L 40,230 Z" fill="#4B5563" />
+    <path d="M 60,130 L 78,130 L 76,230 L 62,230 Z" fill="#374151" />
+  </g>
+
+  <!-- Bright, Clear Architectural Sun Flare -->
+  <circle cx="200" cy="240" r="160" fill="#FFFFFF" fill-opacity="0.3" filter="blur(20px)" />
+</svg>

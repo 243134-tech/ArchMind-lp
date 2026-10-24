@@ -1,0 +1,86 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isProjectMember(projectId) {
+      return isAuthenticated() && (
+        resource.data.ownerId == request.auth.uid ||
+        request.auth.uid in resource.data.members
+      );
+    }
+
+    // User profiles: Only self can write, authenticated users can read basic profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId);
+    }
+
+    // Projects: Strict ownership and collaboration control
+    match /projects/{projectId} {
+      allow read, update, delete: if isAuthenticated() && (
+        resource.data.ownerId == request.auth.uid
+      );
+      allow create: if isAuthenticated() && request.resource.data.ownerId == request.auth.uid;
+
+      // Subcollections under projects
+      match /budgetItems/{itemId} {
+        allow read, write: if isAuthenticated();
+      }
+
+      match /designs/{designId} {
+        allow read, write: if isAuthenticated();
+      }
+
+      match /floorPlans/{planId} {
+        allow read, write: if isAuthenticated();
+      }
+
+      match /tasks/{taskId} {
+        allow read, write: if isAuthenticated();
+      }
+
+      match /documents/{docId} {
+        allow read, write: if isAuthenticated();
+      }
+    }
+
+    // Public catalog collections (read-only for clients, admin-only write)
+    match /properties/{propId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.admin == true;
+    }
+
+    match /products/{prodId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.admin == true;
+    }
+
+    match /professionals/{profId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.admin == true;
+    }
+
+    // Inquiries: Clients can create, professionals can read their assigned inquiries
+    match /inquiries/{inquiryId} {
+      allow create: if isAuthenticated();
+      allow read: if isAuthenticated() && (
+        resource.data.clientEmail == request.auth.token.email ||
+        resource.data.professionalId == request.auth.uid
+      );
+    }
+
+    // AI Conversations & Copilot Audit Trail
+    match /aiConversations/{convId} {
+      allow read, write: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+  }
+}

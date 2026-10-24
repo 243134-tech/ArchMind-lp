@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="warm_cove_glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#FDE68A" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="oak_wood_planks" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D7BA9D" />
+      <stop offset="30%" stop-color="#E2CCA8" />
+      <stop offset="60%" stop-color="#D4B495" />
+      <stop offset="100%" stop-color="#DECBAB" />
+    </linearGradient>
+    <pattern id="oak_floor_pattern" width="240" height="30" patternUnits="userSpaceOnUse">
+      <rect width="240" height="30" fill="url(#oak_wood_planks)" stroke="#C4A482" stroke-width="0.8" />
+      <line x1="120" y1="0" x2="120" y2="30" stroke="#BA9773" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Architectural Coffered Ceiling with Warm Indirect LED Cove -->
+  <polygon points="0,0 1920,0 1560,280 360,280" fill="#F8F8F6" />
+  <!-- Inner Recessed Light Box -->
+  <polygon points="460,80 1460,80 1380,220 540,220" fill="#FFFFFF" stroke="#E5E4DE" stroke-width="2" />
+  <!-- 2700K Warm Ambient LED Cove Light Wash -->
+  <polygon points="440,70 1480,70 1490,120 430,120" fill="url(#warm_cove_glow)" />
+  <!-- Black Magnetic Linear Track Lights -->
+  <line x1="560" y1="120" x2="1360" y2="120" stroke="#20211F" stroke-width="6" />
+  <line x1="580" y1="180" x2="1340" y2="180" stroke="#20211F" stroke-width="6" />
+
+  <!-- Back Wall: Finished Warm Neutral Plaster & Dining Vista -->
+  <polygon points="360,280 1560,280 1560,740 360,740" fill="#F3F2EE" />
+  <!-- Panoramic Glass to Garden in center-left -->
+  <rect x="520" y="380" width="540" height="360" fill="#E0F2FE" />
+  <path d="M 520,620 Q 720,540 920,600 T 1060,580" fill="#65A30D" fill-opacity="0.8" />
+
+  <!-- Left Wall: Floor-to-Ceiling Ultra-Slim Sliding Patio Doors -->
+  <polygon points="0,0 360,280 360,740 0,1080" fill="#F8F8F6" />
+  <polygon points="40,120 340,290 340,730 40,960" fill="#BAE6FD" fill-opacity="0.5" />
+  <!-- Cypress Trees outside -->
+  <polygon points="120,440 180,300 240,440" fill="#15803D" />
+  <polygon points="130,520 180,380 230,520" fill="#166534" />
+  <line x1="180" y1="200" x2="180" y2="840" stroke="#20211F" stroke-width="8" />
+
+  <!-- Right Wall: Built-In Custom Architectural Wood Cabinetry & Display Shelves -->
+  <polygon points="1560,280 1920,0 1920,1080 1560,740" fill="#C2A482" />
+  <!-- Vertical Warm LED Lit Shelves -->
+  <rect x="1600" y="320" width="80" height="420" fill="#8A6844" />
+  <rect x="1700" y="240" width="90" height="520" fill="#8A6844" />
+  <line x1="1600" y1="320" x2="1600" y2="740" stroke="#FEF08A" stroke-width="3" />
+  <line x1="1700" y1="240" x2="1700" y2="760" stroke="#FEF08A" stroke-width="3" />
+
+  <!-- Floor: Exquisite Blonde Oak Hardwood Planks -->
+  <polygon points="0,1080 360,740 1560,740 1920,1080" fill="url(#oak_floor_pattern)" />
+
+  <!-- Modern Kitchen Island with Fluted Wood Slats -->
+  <g id="kitchen_island" transform="translate(1080, 520)">
+    <!-- White Engineered Marble Waterfall Top -->
+    <polygon points="0,40 280,0 360,20 80,60" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2" />
+    <!-- Fluted Slatted Oak Island Base -->
+    <polygon points="0,40 80,60 80,240 0,220" fill="#B28D67" />
+    <polygon points="80,60 360,20 360,200 80,240" fill="#C49F77" />
+    <!-- Vertical wood slats lines -->
+    <line x1="120" y1="55" x2="120" y2="235" stroke="#8C6641" stroke-width="3" />
+    <line x1="160" y1="50" x2="160" y2="230" stroke="#8C6641" stroke-width="3" />
+    <line x1="200" y1="45" x2="200" y2="225" stroke="#8C6641" stroke-width="3" />
+    <line x1="240" y1="40" x2="240" y2="220" stroke="#8C6641" stroke-width="3" />
+    <line x1="280" y1="35" x2="280" y2="215" stroke="#8C6641" stroke-width="3" />
+    <line x1="320" y1="30" x2="320" y2="210" stroke="#8C6641" stroke-width="3" />
+  </g>
+
+  <!-- Worker walking towards terrace completing inspection -->
+  <g id="worker_inspecting" transform="translate(740, 520)">
+    <ellipse cx="40" cy="30" rx="14" ry="9" fill="#FFFFFF" />
+    <circle cx="40" cy="38" r="8" fill="#D4A373" />
+    <rect x="28" y="46" width="24" height="60" fill="#E6FF00" />
+    <rect x="26" y="106" width="12" height="90" fill="#4B5563" />
+    <rect x="40" y="106" width="12" height="90" fill="#374151" />
+  </g>
+</svg>

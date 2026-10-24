@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="concrete_ceiling" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9E9E9C" />
+      <stop offset="60%" stop-color="#B2B2AE" />
+      <stop offset="100%" stop-color="#8A8A86" />
+    </linearGradient>
+    <linearGradient id="concrete_floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C2C2BD" />
+      <stop offset="100%" stop-color="#9C9C96" />
+    </linearGradient>
+    <linearGradient id="daylight_left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="column_grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C7C78" />
+      <stop offset="25%" stop-color="#A4A4A0" />
+      <stop offset="100%" stop-color="#6E6E6A" />
+    </linearGradient>
+    <pattern id="conduit_pattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="6" x2="12" y2="6" stroke="#4A4A48" stroke-width="2" />
+      <circle cx="6" cy="6" r="1.5" fill="#333333" />
+    </pattern>
+  </defs>
+
+  <!-- Ceiling -->
+  <polygon points="0,0 1920,0 1560,340 360,340" fill="url(#concrete_ceiling)" />
+  <!-- Ceiling Conduits and Wires -->
+  <path d="M 360,340 Q 600,280 1560,340" stroke="#4A4A48" stroke-width="8" fill="none" />
+  <path d="M 400,280 L 1500,280" stroke="#3A3A38" stroke-width="6" fill="none" />
+  <path d="M 420,240 L 1480,240" stroke="#5A5A56" stroke-width="5" fill="none" />
+  <path d="M 680,240 L 680,340" stroke="#3A3A38" stroke-width="7" />
+  <path d="M 1240,240 L 1240,340" stroke="#3A3A38" stroke-width="7" />
+  
+  <!-- Back Wall (Raw partition blocks and partially plastered) -->
+  <polygon points="360,340 1560,340 1560,760 360,760" fill="#BDBDB8" />
+  <!-- Hallway archway in back -->
+  <rect x="880" y="440" width="180" height="320" fill="#94948E" />
+  
+  <!-- Raw Left Wall & Giant Rough Window Opening -->
+  <polygon points="0,0 360,340 360,760 0,1080" fill="#A8A8A2" />
+  <polygon points="40,240 320,380 320,720 40,880" fill="#E6EEF2" />
+  <polygon points="40,240 320,380 320,720 40,880" fill="url(#daylight_left)" />
+
+  <!-- Raw Right Wall (Being Plastered with Grey Mortar) -->
+  <polygon points="1560,340 1920,0 1920,1080 1560,760" fill="#999994" />
+  <!-- Partial smoothed white/grey plaster patch -->
+  <polygon points="1600,380 1900,180 1900,820 1600,740" fill="#D6D6D2" />
+
+  <!-- Floor (Raw Concrete Screed) -->
+  <polygon points="0,1080 360,760 1560,760 1920,1080" fill="url(#concrete_floor)" />
+
+  <!-- Concrete Columns in Midground -->
+  <!-- Left Column -->
+  <polygon points="560,260 680,260 680,820 560,820" fill="url(#column_grad)" />
+  <polygon points="680,260 720,290 720,800 680,820" fill="#5E5E5A" />
+  <!-- Right Column -->
+  <polygon points="1240,260 1360,260 1360,820 1240,820" fill="url(#column_grad)" />
+  <polygon points="1200,290 1240,260 1240,820 1200,800" fill="#888884" />
+
+  <!-- Construction Workers (Faithful to video: White helmet, neon yellow vest with silver reflective strip, grey pants) -->
+  <!-- Worker 1 on Left measuring column with yellow tape measure -->
+  <g id="worker_measuring" transform="translate(480, 500)">
+    <!-- White Hardhat -->
+    <ellipse cx="60" cy="40" rx="18" ry="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2" />
+    <path d="M 40,46 Q 60,34 80,46" fill="#F3F4F6" />
+    <!-- Head & neck -->
+    <circle cx="60" cy="52" r="10" fill="#D4A373" />
+    <!-- Yellow Neon Hi-Vis Vest -->
+    <path d="M 42,64 L 78,64 L 84,140 L 38,140 Z" fill="#E6FF00" />
+    <!-- Silver reflective vest stripes -->
+    <rect x="46" y="80" width="8" height="60" fill="#E5E7EB" />
+    <rect x="66" y="80" width="8" height="60" fill="#E5E7EB" />
+    <rect x="40" y="110" width="44" height="10" fill="#E5E7EB" />
+    <!-- Grey work trousers -->
+    <path d="M 40,140 L 58,140 L 56,260 L 40,260 Z" fill="#6B7280" />
+    <path d="M 62,140 L 82,140 L 80,260 L 64,260 Z" fill="#4B5563" />
+    <!-- Boots -->
+    <rect x="36" y="260" width="22" height="12" rx="4" fill="#1F2937" />
+    <rect x="64" y="260" width="22" height="12" rx="4" fill="#1F2937" />
+    <!-- Arms holding yellow tape measure out to column -->
+    <path d="M 44,70 L 10,60 L 100,56" stroke="#D4A373" stroke-width="8" stroke-linecap="round" fill="none" />
+    <!-- Yellow retractable tape line -->
+    <line x1="10" y1="58" x2="80" y2="20" stroke="#FBBF24" stroke-width="4" />
+  </g>
+
+  <!-- Worker 2 on Right troweling plaster onto wall -->
+  <g id="worker_plastering" transform="translate(1500, 480)">
+    <!-- White Hardhat -->
+    <ellipse cx="60" cy="40" rx="18" ry="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2" />
+    <!-- Head -->
+    <circle cx="60" cy="52" r="10" fill="#C68B59" />
+    <!-- Yellow Neon Vest -->
+    <path d="M 42,64 L 78,64 L 84,140 L 38,140 Z" fill="#E6FF00" />
+    <rect x="46" y="80" width="8" height="60" fill="#E5E7EB" />
+    <rect x="66" y="80" width="8" height="60" fill="#E5E7EB" />
+    <rect x="40" y="110" width="44" height="10" fill="#E5E7EB" />
+    <!-- Grey pants -->
+    <path d="M 40,140 L 58,140 L 54,260 L 38,260 Z" fill="#6B7280" />
+    <path d="M 62,140 L 82,140 L 80,260 L 64,260 Z" fill="#4B5563" />
+    <rect x="34" y="260" width="22" height="12" rx="4" fill="#1F2937" />
+    <rect x="64" y="260" width="22" height="12" rx="4" fill="#1F2937" />
+    <!-- Arm raised with plaster hawk and trowel -->
+    <path d="M 74,74 L 110,60 L 120,40" stroke="#C68B59" stroke-width="8" stroke-linecap="round" fill="none" />
+    <!-- Trowel & Hawk -->
+    <rect x="106" y="30" width="28" height="16" fill="#9CA3AF" stroke="#4B5563" />
+  </g>
+
+  <!-- Toolbox and plaster bucket on floor -->
+  <g id="tools_floor" transform="translate(680, 780)">
+    <!-- Black and Orange toolbox -->
+    <rect x="0" y="20" width="70" height="36" rx="4" fill="#1F2937" />
+    <rect x="15" y="14" width="40" height="6" fill="#F97316" />
+    <rect x="8" y="24" width="10" height="8" fill="#F97316" />
+    <rect x="52" y="24" width="10" height="8" fill="#F97316" />
+    <!-- White Plaster Bucket -->
+    <polygon points="120,0 160,0 152,48 128,48" fill="#F3F4F6" stroke="#9CA3AF" />
+    <rect x="120" y="0" width="40" height="6" fill="#0284C7" />
+  </g>
+
+  <!-- Ambient Construction Atmosphere Tint -->
+  <rect x="0" y="0" width="1920" height="1080" fill="#000000" fill-opacity="0.05" />
+</svg>

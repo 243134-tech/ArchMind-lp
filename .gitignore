@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Large archives & raw frame dumps (>100MB / uncompressed PNGs)
+*.zip
+archmind_video_frames/
+public/archmind_video_frames/
+/frames/
